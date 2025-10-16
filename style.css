@@ -1,0 +1,129 @@
+:root {
+    --google-blue: #1b66e8; 
+    --google-blue-dark: #1555c5;
+    --surface-color: #ffffff;
+    --background-color: #f5f5f7; 
+    --text-color: #202124; 
+    --text-secondary: #5f6368;
+    --shadow-elevation: 0 4px 8px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+body {
+    font-family: 'Roboto', 'Noto Sans SC', Arial, sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6; 
+}
+h1 {
+    color: var(--text-color);
+    margin-bottom: 2.5rem; 
+    font-size: 2.2rem;
+    font-weight: 400; 
+    border-bottom: 2px solid var(--google-blue);
+    padding-bottom: 0.5rem;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: center;
+    max-width: 1200px; 
+}
+.card {
+    background: var(--surface-color);
+    padding: 2rem; 
+    border-radius: 12px; 
+    box-shadow: var(--shadow-elevation); 
+    text-align: center;
+    width: 90%;
+    max-width: 360px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.app-logo {
+    width: 90px; 
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: 50%; 
+    border: 3px solid var(--background-color); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 0 0.5rem 0; 
+}
+
+p {
+    font-size: 0.95rem; 
+    color: var(--text-secondary);
+    margin: 0 0 0.5rem 0; 
+    width: 100%;
+    word-break: break-all; 
+}
+p:last-of-type {
+    margin-bottom: 2rem; 
+}
+
+button {
+    background: var(--google-blue);
+    color: var(--surface-color);
+    border: none;
+    padding: 0.8rem 2rem; 
+    font-size: 1rem;
+    font-weight: 500; 
+    border-radius: 6px; 
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px; 
+    min-width: 180px; 
+}
+button:hover {
+    background: var(--google-blue-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+button:active {
+    transform: scale(0.98); 
+}
+
+.progress-container {
+    width: 100%;
+    background: #e8e8e8; 
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-top: 2rem;
+    height: 10px; 
+    display: none;
+}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--google-blue);
+    transition: width 0.3s ease;
+    border-radius: 9999px;
+}
+.percent {
+    margin-top: 1rem;
+    font-size: 1rem; 
+    color: var(--text-secondary);
+    font-weight: 500;
+}
